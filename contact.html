@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive College Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html">
+                <img src="images/logo.png" alt="">
+            </a>
+            <div class="nav-links" id="nav-links">
+                <img src="images/rectangle-xmark-solid.svg" class="svg close" onclick="hideMenu()">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <img src="images/bars-solid.svg" class="svg" onclick="showMenu()">
+        </nav>
+        <h1>
+            Contact Us
+        </h1>
+    </section>
+
+
+    <!-- contact us -->
+    <section class="location">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d527.5189885296592!2d88.4350007077308!3d22.911148118053436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f895e2cc2cb6d7%3A0x9d6c9ad1419c6261!2sSharma%20Niwas%20%26%20Teachers!5e0!3m2!1sen!2sin!4v1678993052800!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section class="contact-us">
+        <div class="row">
+            <div class="contact-col">
+                <div>
+                    <img src="images/house.png" alt="" class="svg">
+                    <span>
+                        <h5>House no 214 Halisahar Malancha </h5>
+                        <p>24 pgs(N) West Bengal India</p>
+                    </span>
+                </div>
+                <div>
+                    <img src="images/phone.png" alt="" class="svg">
+                    <span>
+                        <h5>+91 9875333892</h5>
+                        <p>Monday to Saturday, 10AM to 6PM</p>
+                    </span>
+                </div>
+                <div>
+                    <img src="images/email.png" alt="" class="svg">
+                    <span>
+                        <h5>sharma.hlr2000@gmail.com</h5>
+                        <p>Email Us Your Query</p>
+                    </span>
+                </div>
+            </div>
+            <div class="contact-col">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="name" placeholder="Enter your name" id="name" required>
+                    <input type="email" name="email" placeholder="Enter your email address" id="email" required>
+                    <input type="text" name="subject" placeholder="Enter your subject" id="subject" required>
+                    <textarea rows="8" placeholder="Message" name="message" id="message" required></textarea>
+                    <button type="submit" class="hero-btn red-btn">Send Message</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>Lorem ipsum dolor sit Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque possimus, maxime optio
+            in reiciendis at sit officiis consectetur porro dolorem tenetur nihil? amet consectetur adipisicing elit.
+            Laudantium ab, <br> quam quasi totam hic incidunt doloribus consequuntur error possimus quibusdam eius
+            dolores ipsam aliquid nam neque! Voluptatibus ipsam temporibus vitae?</p>
+        <div class="icons">
+            <a href="https://www.facebook.com/profile.php?id=100011760596080&mibextid=ZbWKwL">
+
+                <img src="images/facebook.png" alt="" class="svg x10">
+            </a>
+            <a href="https://wa.me/+919875333892">
+
+                <img src="images/whatsapp.png" alt="" class="svg x10">
+            </a>
+            <a href="https://instagram.com/sudhanshu.hlr?igshid=ZDdkNTZiNTM=">
+
+                <img src="images/instagram.png" alt="" class="svg x10">
+            </a>
+            <a href="http://www.twitter.com/@Sudhans19382206">
+
+                <img src="images/twitter.png" alt="" class="svg x10">
+            </a>
+        </div>
+        <p><img src="images/heart-solid.svg" alt="" width="13px"> Made By Sudhanshu Sharma <img
+                src="images/heart-solid.svg" alt="" width="13px"> </p>
+    </section>
+
+    <script src="script.js"></script>
+
+    <!-- <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby43PB2qXk1bwZdVJT_nxFsV1NQEi8FI-A91y_sonbcNNAOXcwLdZmmTryWmysx_srZsQ/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        form.addEventListener('submit', e => {
+            document.getElementById("msg").innerText="Thanks! Your response has been sent."
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    form.reset()
+                    alert("ok")
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script> -->
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbz_B0uu4wCuy7Xz8lEof_MlBJI17wxijkWuciEFHsEKBZw6wAKUUVcVqBotfcmlcm-N/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const msg= document.getElementById("msg");
+      
+        form.addEventListener('submit', e => {
+            msg.innerText="Successfully Sent!"
+            
+            
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .catch(error => console.error('Error!', error.message))
+            form.reset();
+            // msg.innerText="";
+            setInterval(()=>{
+                msg.innerText="";
+            },1500)
+        })
+        
+      </script>
+    
+
+</body>
+
+</html>
